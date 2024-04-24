@@ -2,14 +2,14 @@ import React from 'react';
 import {View, Text, Button} from 'react-native';
 import {StyleSheet} from 'react-native';
 
-function Home({navigation}) {
+function Smile({navigation}) {
   return (
     <View style={styles.container}>
       <Text style={styles.textProps}>Hello, Home!</Text>
       <Button
         style={styles.btnStyle}
-        title="Go"
-        onPress={() => navigation.navigate('Detail')}
+        title="Back to "
+        onPress={() => navigation.popToTop()}
       />
     </View>
   );
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Smile;
