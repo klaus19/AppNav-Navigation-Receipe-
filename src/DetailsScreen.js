@@ -2,10 +2,13 @@ import React from 'react';
 import {View, Text, Button} from 'react-native';
 import {StyleSheet} from 'react-native';
 
-function Detail({navigation}) {
+function Detail({route, navigation}) {
+  const {itemId, otherParam} = route.params;
   return (
     <View style={styles.container}>
-      <Text style={styles.textProps}>Hello, Detail!</Text>
+      <Text style={styles.textProps}>Details Screen</Text>
+      <Text>itemId:{JSON.stringify(itemId)}</Text>
+      <Text>otherParam:{JSON.stringify(otherParam)}</Text>
       <View style={styles.buttonContainer}>
         <Button
           style={styles.btnStyle1}

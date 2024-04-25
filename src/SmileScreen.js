@@ -5,7 +5,7 @@ import {StyleSheet} from 'react-native';
 function Smile({navigation}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.textProps}>Hello, Home!</Text>
+      <Text style={styles.textProps}>Hello,Smile</Text>
       <Button
         style={styles.btnStyle}
         title="Back to "

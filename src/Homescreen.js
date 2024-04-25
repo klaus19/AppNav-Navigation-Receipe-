@@ -9,7 +9,12 @@ function Home({navigation}) {
       <Button
         style={styles.btnStyle}
         title="Go"
-        onPress={() => navigation.navigate('Detail')}
+        onPress={() =>
+          navigation.navigate('Detail', {
+            itemId: 89,
+            otherParam: 'anything you want here',
+          })
+        } // Removed the extra closing parenthesis
       />
     </View>
   );
