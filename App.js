@@ -4,6 +4,7 @@ import Home from './src/Homescreen';
 import Detail from './src/DetailsScreen';
 import Smile from './src/SmileScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Alert, Button} from 'react-native';
 
 const stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const App = () => {
             headerTitleStyle: {
               fontWeight: 'bold',
             },
+            headerRight: () => <Button title="Count" />,
           }}
         />
         <stack.Screen

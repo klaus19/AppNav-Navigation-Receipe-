@@ -3,8 +3,18 @@ import {View, Text, Button} from 'react-native';
 import {StyleSheet} from 'react-native';
 
 function Home({navigation}) {
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <Button onPress={() => setCount(c => c + 1)} title="Update count" />
+      ),
+    });
+  }, [navigation]);
   return (
     <View style={styles.container}>
+      <Text>Count: {count}</Text>
       <Text style={styles.textProps}>Hello, Home!</Text>
       <Button
         style={styles.btnStyle}
